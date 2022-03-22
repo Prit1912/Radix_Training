@@ -1,0 +1,27 @@
+:root{
+    --main-color: #f9f9f9 !important;
+    --primary-color: #0e2a4e !important;
+    --secondary-color: #ee4865 !important;
+}
+
+body{
+    background-color: var(--main-color) !important;
+    color: rgb(43, 42, 42);
+    overflow-y: hidden;
+}
+
+.txt-primary{
+    color: var(--primary-color) !important;
+}
+
+.bg-primary{
+    background-color: var(--primary-color) !important;
+}
+
+.txt-secondary{
+    color: var(--secondary-color) !important;
+}
+
+.bg-secondary{
+    background-color: var(--secondary-color) !important;
+}
