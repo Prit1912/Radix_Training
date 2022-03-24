@@ -8,9 +8,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#"> <router-link :to="{ name: 'indexPage' }"> <b> Home </b> </router-link> </a>
-        </li>
+        </li> -->
         <li class="nav-item">
           <span class="nav-link" >  <router-link :to="{ name: 'milestone1' }"> <b> Milestone1 </b>  </router-link>  </span>
         </li>
@@ -50,14 +50,20 @@ export default {
 
 <style scoped>
     .navbar{
+        min-height: 7vh;
         position: sticky;
         top: 0;
         left: 0;
-        box-shadow: 2px 2px 5px #EE4865;
+        box-shadow: 2px 2px 8px var(--secondary-color);
         z-index: 100;
     }
-    .router-link-exact-active{
-        color: #EE4865;
+    .navbar-toggler{
+      color: transparent;
+      border: none;
+      outline: none;
+    }
+    .router-link-active,.router-link-exact-active{
+        color: var(--secondary-color);
     }
     a{
         list-style: none;
@@ -68,5 +74,8 @@ export default {
     a:hover{
         color: var(--secondary-color);
     }
-    
+    #logo{
+      font-size: 20px;
+      font-weight: bold;
+    }
 </style>

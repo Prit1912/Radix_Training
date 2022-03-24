@@ -25,6 +25,26 @@ const routes = [
             path: "interpolation",
             name: 'Interpolation',
             component: () => import('../pages/milestone1/Practice/Interpolation.vue')
+          },
+          {
+            path: 'data-binding',
+            name: 'Data Binding',
+            component: () => import('../pages/milestone1/Practice/DataBinding.vue')
+          },
+          {
+            path: 'reactivity',
+            name: 'Reactivity',
+            component: () => import('../pages/milestone1/Practice/Reactivity.vue')
+          },
+          {
+            path: 'state',
+            name: 'State',
+            component: () => import('../pages/milestone1/Practice/State.vue')
+          },
+          {
+            path: 'lifecycles',
+            name: 'Lifecycles',
+            component: () => import('../pages/milestone1/Practice/Lifecycles.vue')
           }
         ]
       },
