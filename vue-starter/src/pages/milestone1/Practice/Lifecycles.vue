@@ -5,16 +5,21 @@
       <li>{{onMounted_message}}</li>    
       <li>{{onUnmounted_message}}</li>    
   </ul>
+  <br>
+  <input type="text" v-model="inpTxt" > <button class="bnt btn-success" @click="changeName" >Change</button>
+  <br>{{inpTxt}}
 </template>
 
 <script>
-import { ref, onMounted, onBeforeMount, onUnmounted, onBeforeUnmount      } from 'vue-demi'
+import { ref, onMounted, onBeforeMount, onUnmounted, onBeforeUnmount, onUpdated } from 'vue-demi'
 export default {
     name: 'lifecycles',
     setup(){
         let onMounted_message = ref('')
         let onBeforeMount_message = ref('')
         let onUnmounted_message = ref('')
+
+        let inpTxt = ref('')
 
 
         onBeforeMount(()=>{
@@ -35,10 +40,20 @@ export default {
             console.log('component unmounted')
         })
 
+        onUpdated(()=>{
+            console.log('updated called')
+        })
+
+        let changeName = ()=>{
+            inpTxt.value = 'Name changed'
+        }
+
         return{
             onMounted_message,
             onBeforeMount_message,
-            onUnmounted_message
+            onUnmounted_message,
+            inpTxt,
+            changeName
         }
     }
 }

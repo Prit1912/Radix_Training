@@ -20,6 +20,7 @@ const routes = [
         path: "milestone1",
         name: "milestone1",
         component: Milestone1BasePage,
+        redirect: {name: 'Interpolation'},
         children:[
           {
             path: "interpolation",
@@ -45,6 +46,26 @@ const routes = [
             path: 'lifecycles',
             name: 'Lifecycles',
             component: () => import('../pages/milestone1/Practice/Lifecycles.vue')
+          },
+          {
+            path: 'directives',
+            name: 'Directives',
+            component: () => import('../pages/milestone1/Practice/Directives.vue')
+          },
+          { 
+            path: 'event-handling',
+            name: 'Event Handling',
+            component: () => import('../pages/milestone1/Practice/EventHandling.vue')
+          },
+          {
+            path: 'computed-and-watchers',
+            name: 'Computed and Watchers',
+            component: () => import('../pages/milestone1/Practice/ComputedAndWatchers.vue')
+          },
+          {
+            path: 'forms',
+            name: 'Forms',
+            component: () => import('../pages/milestone1/Practice/Forms.vue')
           }
         ]
       },
