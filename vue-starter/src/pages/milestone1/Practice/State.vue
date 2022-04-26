@@ -27,7 +27,7 @@ export default {
         let myCount = strItems.count;
 
         // using computed
-        let count = computed(()=>usrStore.count)
+         let count = computed(()=>usrStore.count)
 
         let cnt = usrStore.getCount
 

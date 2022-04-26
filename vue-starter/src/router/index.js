@@ -73,6 +73,34 @@ const routes = [
         path: "milestone2",
         name: "milestone2",
         component: Milestone2BasePage,
+        redirect: {name: 'Mixings'},
+        children: [
+          {
+            path: 'mixings',
+            name: 'Mixings',
+            component: () => import('../pages/milestone2/Practice/Mixings.vue')
+          },
+          {
+            path: 'class-and-style-binding',
+            name: 'Class and Style Binding',
+            component: () => import('../pages/milestone2/Practice/ClassAndStyleBinding.vue')
+          },
+          {
+            path: 'reusable-component',
+            name: 'Reusable Component',
+            component: () => import('../pages/milestone2/Practice/Reusable.vue')
+          },
+          {
+            path: 'materia-ui-and-tailwind-css',
+            name: 'Material UI and Tailwind',
+            component: () => import('../pages/milestone2/Practice/MaterialUiAndTailwind.vue')
+          },
+          {
+            path: 'axios',
+            name: 'Axios',
+            component: () => import('../pages/milestone2/Practice/Axios.vue')
+          }
+        ]
       },
       {
         path: "exercise",

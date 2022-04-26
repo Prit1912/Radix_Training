@@ -141,7 +141,7 @@
             </select>
           </div>
         </div>
-        <button class="btn btn-danger">Sign Up</button>
+        <button :disabled="isDisabled" class="btn btn-danger">Sign Up</button>
       </form>
     </div>
   </div>
@@ -154,6 +154,7 @@ import * as yup from 'yup';
 export default {
   setup() {
     let inpText = ref(null);
+    let isDisabled = ref(true);
     let formData = reactive({
       name: "",
       email: "",
@@ -176,8 +177,7 @@ export default {
     const {value: name, errorMessage: errorName} = useField('name');
     const {value: email, errorMessage: errorEmail} = useField('email');
     const {value: password, errorMessage: errorPassword} = useField('password');
-    // const {value: interests, errorMessage: errorInterests} = useField('interests');
-
+    // const {value: interests, errorMessage: errorInterests} = useField('interests')
 
     formData.name = name;
     formData.email = email;
@@ -202,6 +202,7 @@ export default {
 
     return {
       inpText,
+      isDisabled,
       formData,
       errorName,
       errorEmail,
