@@ -16,7 +16,7 @@ export default {
 <style scoped>
 .router-link-exact-active {
   color: var(--secondary-color) !important;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 a {
   color: wheat !important;
@@ -27,6 +27,6 @@ li{
   list-style: none;
 }
 li:hover{
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 </style>

@@ -92,8 +92,8 @@ const routes = [
           },
           {
             path: 'materia-ui-and-tailwind-css',
-            name: 'Material UI and Tailwind',
-            component: () => import('../pages/milestone2/Practice/MaterialUiAndTailwind.vue')
+            name: 'Tailwind CSS',
+            component: () => import('../pages/milestone2/Practice/TailwindCSS.vue')
           },
           {
             path: 'axios',

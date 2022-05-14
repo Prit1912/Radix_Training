@@ -32,7 +32,7 @@ export default {
         "Mixings",
         "Class and Style Binding",
         "Reusable Component",
-        "Material UI and Tailwind",
+        "Tailwind CSS",
         "Axios",
         // "Directives",
         // "Event Handling",
