@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@headlessui/vue": "^1.6.1",
+    "@hennge/vue3-pagination": "^1.0.17",
     "@heroicons/vue": "^1.0.6",
     "axios": "^0.26.1",
     "core-js": "^3.8.3",
@@ -16,7 +17,7 @@
     "lodash": "^4.17.21",
     "pinia": "^2.0.12",
     "pinia-plugin-persistedstate": "^1.5.1",
-    "vee-validate": "^4.5.10",
+    "vee-validate": "^4.5.11",
     "vue": "^3.2.13",
     "vue-router": "^4.0.13",
     "vuex": "^4.0.2",
