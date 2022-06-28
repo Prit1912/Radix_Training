@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import './assets/css/style.css'
 import Header from './components/header/index.vue';
 import Footer from './components/footer/index.vue';
 export default {

@@ -14,7 +14,7 @@ const routes = [
     {
         path: '/contact-list',
         name: 'ContactList',
-        component: () => import('../pages/contact/contactList.vue')
+        component: () => import('../pages/contactList/index.vue')
     }
 ];
 
