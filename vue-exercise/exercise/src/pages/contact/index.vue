@@ -43,7 +43,7 @@ export default {
   props: ['pro'],
   data() {
     let contactData = {
-      firstName: "",
+    firstName: "",
       lastName: "",
       email: "",
       phone: "",

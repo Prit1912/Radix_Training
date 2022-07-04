@@ -17,6 +17,16 @@ class contactService{
         return http.delete( `/contacts/${contactId}`)
     }
 
+    // get contact by id
+    getContact(id){
+        return http.get(`/contacts/${id}`)
+    }
+
+    // update contact by id
+    updateContact(id,data){
+        return http.patch(`/contacts/${id}`, data)
+    }
+
 }
 
 export default new contactService();

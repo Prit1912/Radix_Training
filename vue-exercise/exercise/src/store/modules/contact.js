@@ -16,6 +16,14 @@ export const contact = {
 
       addContact(state, contact){
         state.contacts.push(contact);
+      },
+
+      updateContact(state, contact){
+        state.contacts.forEach((c)=>{
+          if(c._id === contact.id){
+            Object.assign(c, contact.data)
+          }
+        })
       }
     },
     actions: {
@@ -27,6 +35,11 @@ export const contact = {
       // add contact
       addContact({commit}, contact){
         commit("addContact", contact)
+      },
+
+      // update contact
+      updateContact({commit}, contact){
+        commit("updateContact", contact)
       }
     },
   };
