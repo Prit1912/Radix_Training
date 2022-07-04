@@ -16,7 +16,7 @@ mongoose.connect(`${process.env.MongoURI}${process.env.DB}`).then(()=>{
 app.use(express.json());
 app.use(cors());
 
-app.use('/contacts', contactRouter);
+app.use('/contacts/', contactRouter);
 
 app.listen(`${process.env.Port}`,()=>{
     console.log(`listening to port ${process.env.Port}`)

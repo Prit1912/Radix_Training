@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+var aggregatePaginate = require("mongoose-aggregate-paginate-v2");
 
 const contactSchema = new mongoose.Schema({
     firstName: {
@@ -19,24 +20,14 @@ const contactSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    createdAt: {
-        type: Date,
-        default: new Date(),
-    },
-    updatedAt: {
-        type: Date,
-        default: new Date()
-    },
     isActive: {
         type: Boolean,
         default: true
     }
-})
+},{ timestamps: true })
 
-contactSchema.pre("save",function(next){
-    this.updatedAt = new Date();
-    next();
-})
+contactSchema.plugin(aggregatePaginate);
+
 const users = mongoose.model('user', contactSchema);
 
 module.exports = users;

@@ -6,10 +6,10 @@ router.get('/',contactController.getAllContacts);
 
 router.post('/',contactController.addContact);
 
-router.get('/:userId',contactController.getContact)
+router.get('/:contactId',contactController.getContact)
 
-router.patch('/:userId',contactController.updateContact);
+router.patch('/:contactId',contactController.updateContact);
 
-router.delete('/:userId',contactController.deleteContact);
+router.delete('/:contactId',contactController.deleteContact);
 
 module.exports = router;

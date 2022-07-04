@@ -37,8 +37,10 @@
 <script>
 import { useField, useForm } from "vee-validate";
 import * as yup from "yup";
+import contactService from '../../services/contact';
 export default {
   name: "Contact",
+  props: ['pro'],
   data() {
     let contactData = {
       firstName: "",
@@ -74,12 +76,15 @@ export default {
     const {value: email, errorMessage: errorEmail} = useField('email');
     const {value: phone, errorMessage: errorPhone} = useField('phone');
 
-    contactData = {firstName, lastName, email, phone}
+    contactData.firstName = firstName;
+    contactData.lastName = lastName;
+    contactData.email = email;
+    contactData.phone = phone;
 
      const submit = handleSubmit((values)=>{
       console.log('called')
       console.log(values);
-      // this.signup(values);
+      this.addContact(values);
     })
 
     return {
@@ -96,6 +101,19 @@ export default {
     }
   
   },
+  mounted(){
+    console.log(this.$store)
+  },  
+  methods:{
+    addContact(data){
+      contactService.addContact(data).then((res)=>{
+        console.log(res);
+        this.$store.dispatch("contact/addContact", res.data);
+      }).catch((err)=>{
+        console.log(err.response.data);
+      })
+    }
+  }
 };
 </script>
 
